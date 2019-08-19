@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm Kiểm Tra Số Nguyên Tố</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    function isPrime(intNumber) {
+        for (let i = 2; i <= intNumber; i++) {
+            let count = 0;
+            for (let j = 1; j <= intNumber; j++) {
+                if (i % j == 0) {
+                    count += 1;
+                }
+            }
+            if (count < 3) {
+                arr.push(i);
+            }
+        }
+    }
+    isPrime(1000);
+    alert(arr);
+</script>
+</body>
+</html>
